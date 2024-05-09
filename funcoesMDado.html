@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dado</title>
+</head>
+
+<body>
+    <body style="background-color:rgb(222, 138, 254);">
+    <img id="dado" onclick="jogaDado()" src="images/dados.gif" width="300" height="300">
+    <div id="imagens"></div>​
+    <script>
+        function jogaDado(){
+
+            let dadinho=Math.round(Math.random()*6);
+            if (dadinho==0){ dadinho=dadinho+6};
+            var img = document.createElement("IMG");
+            img.src = "images/dado" + dadinho + ".png";
+            img.style.left ="150px";
+            img.style.top ="310px";
+            img.style.position="absolute";
+            img.style.width="50px";
+            img.style.height="50px";
+            document.getElementById('imagens').appendChild(img);
+
+
+            console.log(dadinho);
+        }
+    </script>
+    ​
+</body>
+
+</html>
